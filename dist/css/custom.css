@@ -1,0 +1,12 @@
+#searchbar{
+    margin-bottom:0px;
+}
+
+.media-body > .text-sm {
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    width: 160px;
+    height: 25px;
+
+}
