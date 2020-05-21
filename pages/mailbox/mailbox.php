@@ -1,13 +1,13 @@
 <?php
 $pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0';
-
 if($pageWasRefreshed) {
-   //do something because page was refreshed;
+  require('model/mail-functions.php');//do something because page was refreshed;
 } else {
   if(isset($_GET['reload'])){
     session_start();
     require('../../model/connect.php');
     require('../../model/bar-functions.php');
+    require('../../model/mail-functions.php');
     //require('../../model/functions.php');
     if(isset($_SESSION['username'])){
       //called for mailitem.php to be used if the browser reload was not completed.
@@ -16,6 +16,7 @@ if($pageWasRefreshed) {
     }
   }
 }
+$mail_count = getMessageCount($UserInfo['ID']);
 
 ?>
 <!-- Content Header (Page header) -->
@@ -150,7 +151,7 @@ if($pageWasRefreshed) {
                 <!-- /.btn-group -->
                 <button type="button" class="btn btn-default btn-sm"><i class="fas fa-sync-alt"></i></button>
                 <div class="float-right">
-                  1-50/200
+                  1-<?php echo($mail_count . '/' . $mail_count);?>
                   <div class="btn-group">
                     <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-left"></i></button>
                     <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-right"></i></button>
