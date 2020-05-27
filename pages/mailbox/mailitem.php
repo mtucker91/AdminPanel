@@ -28,7 +28,7 @@ foreach($retval as $mnu){
             <td class="mailbox-subject"><?php echo($retval[$i]['msg_cont']) ?>
         </td>
         <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
-        <td class="mailbox-date">5 mins ago</td>
+        <td class="mailbox-date"><?php $tme = getMsgTimeStampDiff($retval[$i]['Sent_Dte']); echo($tme ." ago");?></td>
     </tr>
 <?php
 $i += 1;
