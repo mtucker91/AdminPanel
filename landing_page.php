@@ -39,6 +39,13 @@
                 <p class="card-text">
                   Sidebar Navigation now saves the status of the bar whether or not it is collapsed. Utilizing Ajax to submit the collapsed status to the database, when you reload the page, it knows if the user prefers the bar collapsed or not.
                 </p>
+                <h3>Updates:</h3>
+                <p class="card-text">
+                  At this time, the Time Clock Clock-in Option works to allow a person to clock in and out.  Reporting table not coded yet.
+                </p>
+                <p class="card-text">
+                  The mailbox menu option allows you to go to the mailbox to view that user's messages.  Only coded for viewing the list, not for the contents or further information.
+                </p>
                 <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
               </div>
             </div>

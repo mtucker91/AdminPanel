@@ -31,7 +31,7 @@
     <li class="nav-item dropdown">
     <a class="nav-link" data-toggle="dropdown" href="#">
         <i class="far fa-comments"></i>
-        <span class="badge badge-danger navbar-badge"><?php echo($messagecount); ?></span>
+        <span class="badge badge-danger navbar-badge">10</span>
     </a>
     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 
@@ -66,7 +66,8 @@
                     <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
                 </h3>
                 <p class="text-sm"><?php echo($msgpreview[$i]['msg_cont'])?>...</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i><?php $tme = getMsgTimeStampDiff($msgpreview[$i]['Sent_Dte']); echo($tme);?></p>
+                <!-- need to replace code for timestamp diff due to messing with timeclock upon loading -->
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i><?php //$tme = getMsgTimeStampDiff($msgpreview[$i]['Sent_Dte']); echo($tme);?></p>
             </div>
         </div>
         <!-- Message End -->
@@ -90,8 +91,8 @@
     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
             <span class="dropdown-header">15 Notifications</span>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <a href="#" class="dropdown-item" id="top-bar-new-msg">
+            <i class="fas fa-envelope mr-2"></i> <?php echo($messagecount); ?> new messages
             <span class="float-right text-muted text-sm">3 mins</span>
             </a>
             <div class="dropdown-divider"></div>

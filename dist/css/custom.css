@@ -10,3 +10,42 @@
     height: 25px;
 
 }
+
+#timeclock-dropdown{
+    height: calc(2.875rem + 2px);
+    background-color: #007bff;
+    color:#FFF;
+}
+
+#timeclock-dropdown > option{
+    background-color:inherit;
+    color:inherit;
+}
+#timeclock-dropdown > option:disabled{
+    color: #e3e3e3;
+    background-color: #595959;
+}
+
+.timeclock-status{
+    text-align:center;
+}
+
+h4 .stat-ph-success{
+    color: #00e600;
+}
+
+h4 .stat-ph-failure{
+    color: red;
+}
+
+h4 .stat-ph-break{
+    color: #e5e600;
+}
+
+h4 .stat-ph-lunch{
+    color: #e68a00;
+}
+
+h4 .stat-ph-inactive{
+    color: grey;
+}

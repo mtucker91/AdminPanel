@@ -9,5 +9,8 @@ else if(isset($_GET['page_name'])){
     else if($_GET['page_name'] == 'mailbox.php'){
         require('pages/mailbox/mailbox.php');
     }
+    else if($_GET['page_name'] == 'clockin.php'){
+        require('pages/timeclock/clockin.php');
+    }
 }
 ?>

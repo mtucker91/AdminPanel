@@ -64,8 +64,15 @@ require('model/session_check.php');
 
 <!-- REQUIRED SCRIPTS -->
 
-<!-- jQuery -->
+<?php
+if(!isset($_GET['reload']) && $_GET['page_name'] != 'clockin.php'){
+?>
 <script src="plugins/jquery/jquery.min.js"></script>
+<?php
+}
+?>
+<!-- jQuery -->
+<!-- <script src="plugins/jquery/jquery.min.js"></script> -->
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
